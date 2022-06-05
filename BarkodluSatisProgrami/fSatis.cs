@@ -16,6 +16,7 @@ namespace BarkodluSatisProgrami
         public fSatis()
         {
             InitializeComponent();
+            Size = new Size(1400,700);
         }
 
         private void tBarkod_KeyDown(object sender, KeyEventArgs e)
@@ -122,6 +123,25 @@ namespace BarkodluSatisProgrami
             }
         }
 
+        private void HizliButonClick(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            int butonId = Convert.ToInt16(b.Name.ToString().Substring(2, b.Name.Length - 2));
+            if (b.Text.ToString().StartsWith("-"))
+            {
+                fHizliButonUrunEkle f = new fHizliButonUrunEkle();
+                f.lButonId.Text = butonId.ToString();
+                f.ShowDialog();
+            }
+            else
+            {
+                
+                var urunBarkod = db.HizliUrun.Where(a => a.Id == butonId).Select(a => a.Barkod).FirstOrDefault();
+                var urun = db.Urun.Where(a => a.Barkod == urunBarkod).FirstOrDefault();
+                UrunGetirListele(urun, urunBarkod, 1);
+                GenelToplam(); 
+            }
+        }
         private void fSatis_Load(object sender, EventArgs e)
         {
             HizliButonDoldur();
@@ -139,6 +159,37 @@ namespace BarkodluSatisProgrami
                     bH.Text = item.UrunAd + "\n" + fiyat.ToString("C2");
                 }
             }    
+        }
+
+        private void bH_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                Button b = (Button)sender;
+                if (!b.Text.StartsWith("-"))
+                {
+                    int butonId = Convert.ToInt16(b.Name.ToString().Substring(2, b.Name.Length - 2));
+                    ContextMenuStrip s = new ContextMenuStrip();
+                    ToolStripMenuItem sil = new ToolStripMenuItem();
+                    sil.Text = "Temizle - Buton No:" + butonId.ToString();
+                    sil.Click += Sil_Click;
+                    s.Items.Add(sil);
+                    this.ContextMenuStrip = s;
+                }
+            }
+        }
+
+        private void Sil_Click(object sender, EventArgs e)
+        {
+            int butonId = Convert.ToInt16(sender.ToString().Substring(19, sender.ToString().Length - 19));
+            var guncelle = db.HizliUrun.Find(butonId);
+            guncelle.Barkod = "-";
+            guncelle.UrunAd = "-";
+            guncelle.Fiyat = 0;
+            db.SaveChanges();
+            double fiyat = 0;
+            Button b = this.Controls.Find("bH" + butonId, true).FirstOrDefault() as Button;
+            b.Text = "-" + "\n" + fiyat.ToString("C2");
         }
     }
 }
