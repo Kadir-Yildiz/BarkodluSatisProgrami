@@ -16,12 +16,12 @@ namespace BarkodluSatisProgrami
         public fSatis()
         {
             InitializeComponent();
-            Size = new Size(1400,700);
+            Size = new Size(1400, 700);
         }
 
         private void tBarkod_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode==Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 string barkod = tBarkod.Text.Trim();
                 if (barkod.Length <= 2)
@@ -32,7 +32,7 @@ namespace BarkodluSatisProgrami
                 }
                 else
                 {
-                    if (db.Urun.Any(a=> a.Barkod==barkod))
+                    if (db.Urun.Any(a => a.Barkod == barkod))
                     {
                         var urun = db.Urun.Where(a => a.Barkod == barkod).FirstOrDefault();
                         UrunGetirListele(urun, barkod, Convert.ToDouble(tMiktar.Text));
@@ -43,7 +43,7 @@ namespace BarkodluSatisProgrami
                         if (db.Terazi.Any(a => a.TeraziOnEk == onEk))
                         {
                             string teraziUrunNo = barkod.Substring(2, 5);
-                            if (db.Urun.Any(a=>a.Barkod==teraziUrunNo))
+                            if (db.Urun.Any(a => a.Barkod == teraziUrunNo))
                             {
                                 var urunTerazi = db.Urun.Where(a => a.Barkod == teraziUrunNo).FirstOrDefault();
                                 double miktarkg = Convert.ToDouble(barkod.Substring(7, 5)) / 1000;
@@ -67,7 +67,7 @@ namespace BarkodluSatisProgrami
             }
         }
 
-        private void UrunGetirListele(Urun urun,string barkod,double miktar)
+        private void UrunGetirListele(Urun urun, string barkod, double miktar)
         {
             int satirSayisi = gridSatisListesi.Rows.Count;
             //double miktar = Convert.ToDouble(tMiktar.Text);
@@ -100,21 +100,21 @@ namespace BarkodluSatisProgrami
         }
         private void GenelToplam()
         {
-            
-                double toplam = 0;
-                for (int i = 0; i < gridSatisListesi.Rows.Count; i++)
-                {
-                    toplam += Convert.ToDouble(gridSatisListesi.Rows[i].Cells["Toplam"].Value);
-                }
-                tGenelToplam.Text = toplam.ToString("C2");
-                tBarkod.Clear();
-                tBarkod.Focus();
-            
+
+            double toplam = 0;
+            for (int i = 0; i < gridSatisListesi.Rows.Count; i++)
+            {
+                toplam += Convert.ToDouble(gridSatisListesi.Rows[i].Cells["Toplam"].Value);
+            }
+            tGenelToplam.Text = toplam.ToString("C2");
+            tBarkod.Clear();
+            tBarkod.Focus();
+
         }
 
         private void gridSatisListesi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex==9)
+            if (e.ColumnIndex == 9)
             {
                 gridSatisListesi.Rows.Remove(gridSatisListesi.CurrentRow);
                 gridSatisListesi.ClearSelection();
@@ -135,16 +135,30 @@ namespace BarkodluSatisProgrami
             }
             else
             {
-                
+
                 var urunBarkod = db.HizliUrun.Where(a => a.Id == butonId).Select(a => a.Barkod).FirstOrDefault();
                 var urun = db.Urun.Where(a => a.Barkod == urunBarkod).FirstOrDefault();
-                UrunGetirListele(urun, urunBarkod, 1);
-                GenelToplam(); 
+                UrunGetirListele(urun, urunBarkod, Convert.ToDouble(tMiktar.Text));
+                GenelToplam();
             }
         }
         private void fSatis_Load(object sender, EventArgs e)
         {
             HizliButonDoldur();
+            ParaBirimleriniEkle();
+
+
+
+        }
+
+        private void ParaBirimleriniEkle()
+        {
+            b5.Text = 5.ToString("C2");
+            b10.Text = 10.ToString("C2");
+            b20.Text = 20.ToString("C2");
+            b50.Text = 50.ToString("C2");
+            b100.Text = 100.ToString("C2");
+            b200.Text = 200.ToString("C2");
         }
 
         private void HizliButonDoldur()
@@ -152,13 +166,13 @@ namespace BarkodluSatisProgrami
             var hizliUrun = db.HizliUrun.ToList();
             foreach (var item in hizliUrun)
             {
-                Button bH=this.Controls.Find("bH"+ item.Id,true).FirstOrDefault() as Button;
+                Button bH = this.Controls.Find("bH" + item.Id, true).FirstOrDefault() as Button;
                 if (bH != null)
                 {
                     double fiyat = Islemler.DoubleYap(item.Fiyat.ToString());
                     bH.Text = item.UrunAd + "\n" + fiyat.ToString("C2");
                 }
-            }    
+            }
         }
 
         private void bH_MouseDown(object sender, MouseEventArgs e)
@@ -190,6 +204,79 @@ namespace BarkodluSatisProgrami
             double fiyat = 0;
             Button b = this.Controls.Find("bH" + butonId, true).FirstOrDefault() as Button;
             b.Text = "-" + "\n" + fiyat.ToString("C2");
+        }
+
+        private void bNx_Click(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            if (b.Text == ",")
+            {
+                int virgul = tNumarator.Text.Count(x => x == ',');
+                if (virgul < 1)
+                {
+                    tNumarator.Text += b.Text;
+                }
+            }
+            else if (b.Text == "<")
+            {
+                if (tNumarator.Text.Length > 0)
+                {
+                    tNumarator.Text = tNumarator.Text.Substring(0, tNumarator.Text.Length - 1);
+                }
+            }
+            else
+            {
+                tNumarator.Text += b.Text;
+            }
+            
+        }
+
+        private void bAdet_Click(object sender, EventArgs e)
+        {
+            if (tNumarator.Text!="")
+            {
+                tMiktar.Text = tNumarator.Text;
+                tNumarator.Clear();
+                tBarkod.Clear();
+                tBarkod.Focus();
+            }
+        }
+
+        private void bOdenen_Click(object sender, EventArgs e)
+        {
+            if (tNumarator.Text!="")
+            {
+                double sonuc = Islemler.DoubleYap(tNumarator.Text) - Islemler.DoubleYap(tGenelToplam.Text);
+                tParaUstu.Text = sonuc.ToString("C2");
+                tNumarator.Clear();
+                tBarkod.Focus();
+            }
+        }
+
+        private void bBarkod_Click(object sender, EventArgs e)
+        {
+            if (tNumarator.Text != "")
+            {
+                if (db.Urun.Any(a=>a.Barkod==tNumarator.Text))
+                {
+                    var urun = db.Urun.Where(a => a.Barkod == tNumarator.Text).FirstOrDefault();
+                    UrunGetirListele(urun, tNumarator.Text, Convert.ToDouble(tMiktar.Text));
+                    GenelToplam();
+                    tNumarator.Clear();
+                    tBarkod.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("Ürün ekleme sayfasını aç");
+                }
+            }
+        }
+
+        private void ParaUstuHesapla_Click(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            double sonuc = Islemler.DoubleYap(b.Text) - Islemler.DoubleYap(tGenelToplam.Text);
+            tParaUstu.Text = sonuc.ToString("C2");
         }
     }
 }

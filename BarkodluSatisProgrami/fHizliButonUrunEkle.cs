@@ -51,5 +51,17 @@ namespace BarkodluSatisProgrami
                 }
             }
         }
+
+        private void chTumu_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chTumu.Checked)
+            {
+                gridUrunler.DataSource = db.Urun.ToList();
+            }
+            else
+            {
+                gridUrunler.DataSource = null;
+            }
+        }
     }
 }
