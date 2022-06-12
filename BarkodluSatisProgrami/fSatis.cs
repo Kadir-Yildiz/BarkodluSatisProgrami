@@ -107,6 +107,7 @@ namespace BarkodluSatisProgrami
                 toplam += Convert.ToDouble(gridSatisListesi.Rows[i].Cells["Toplam"].Value);
             }
             tGenelToplam.Text = toplam.ToString("C2");
+            tMiktar.Text = "1";
             tBarkod.Clear();
             tBarkod.Focus();
 
@@ -277,6 +278,58 @@ namespace BarkodluSatisProgrami
             Button b = (Button)sender;
             double sonuc = Islemler.DoubleYap(b.Text) - Islemler.DoubleYap(tGenelToplam.Text);
             tParaUstu.Text = sonuc.ToString("C2");
+        }
+
+        private void bDigerUrun_Click(object sender, EventArgs e)
+        {
+            if (tNumarator.Text!="")
+            {
+                int satirSayisi = gridSatisListesi.Rows.Count;
+                gridSatisListesi.Rows.Add();
+                gridSatisListesi.Rows[satirSayisi].Cells["Barkod"].Value = "1111111111116";
+                gridSatisListesi.Rows[satirSayisi].Cells["UrunAdi"].Value = "Barkodsuz Ürün";
+                gridSatisListesi.Rows[satirSayisi].Cells["UrunGrup"].Value = "Barkodsuz Ürün";
+                gridSatisListesi.Rows[satirSayisi].Cells["Birim"].Value = "Adet";
+                gridSatisListesi.Rows[satirSayisi].Cells["Miktar"].Value = 1;
+                gridSatisListesi.Rows[satirSayisi].Cells["Fiyat"].Value = Convert.ToDouble(tNumarator.Text);
+                gridSatisListesi.Rows[satirSayisi].Cells["KdvTutari"].Value = 0;
+                gridSatisListesi.Rows[satirSayisi].Cells["Toplam"].Value = Convert.ToDouble(tNumarator.Text);
+                tNumarator.Text = "";
+                GenelToplam();
+                tBarkod.Focus();
+            }
+        }
+
+        private void bIade_Click(object sender, EventArgs e)
+        {
+            if (chSatisIadeIslemi.Checked)
+            {
+                chSatisIadeIslemi.Checked = false;
+                chSatisIadeIslemi.Text = "Satış Yapılıyor";
+            }
+            else
+            {
+                chSatisIadeIslemi.Checked = true;
+                chSatisIadeIslemi.Text = "İade İşlemi";
+            }
+        }
+
+        private void bTemizle_Click(object sender, EventArgs e)
+        {
+            Temizle();
+        }
+
+        private void Temizle()
+        {
+            tMiktar.Text = "1";
+            tBarkod.Clear();
+            tOdenen.Clear();
+            tParaUstu.Clear();
+            tGenelToplam.Text = 0.ToString("C2");
+            chSatisIadeIslemi.Checked = false;
+            tNumarator.Clear();
+            gridSatisListesi.Rows.Clear();
+            tBarkod.Focus();
         }
     }
 }
