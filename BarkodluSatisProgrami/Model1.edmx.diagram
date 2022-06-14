@@ -8,6 +8,9 @@
         <EntityTypeShape EntityType="BarkodluDbModel.Urun" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BarkodluDbModel.Terazi" Width="1.5" PointX="3.375" PointY="0.75" />
         <EntityTypeShape EntityType="BarkodluDbModel.HizliUrun" Width="1.5" PointX="3.375" PointY="3.75" />
+        <EntityTypeShape EntityType="BarkodluDbModel.Islem" Width="1.5" PointX="6" PointY="0.5" />
+        <EntityTypeShape EntityType="BarkodluDbModel.IslemOzet" Width="1.5" PointX="1" PointY="5.5" />
+        <EntityTypeShape EntityType="BarkodluDbModel.Satis" Width="1.5" PointX="6" PointY="3.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

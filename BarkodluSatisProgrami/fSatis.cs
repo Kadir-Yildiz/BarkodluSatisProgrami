@@ -331,5 +331,23 @@ namespace BarkodluSatisProgrami
             gridSatisListesi.Rows.Clear();
             tBarkod.Focus();
         }
+
+        private void SatisYap(string odemeSekli)
+        {
+            int satirSayisi = gridSatisListesi.Rows.Count;
+            bool satisIade = chSatisIadeIslemi.Checked;
+            double alisFiyatToplam = 0;
+            if (satirSayisi>0)
+            {
+                int? islemNo = db.Islem.First().IslemNo;
+                Satis satis = new Satis();
+                for (int i = 0; i < satirSayisi; i++)
+                {
+                    satis.IslemNo = islemNo;
+                    satis.UrunAd = gridSatisListesi.Rows[i].Cells["UrunAdi"].Value.ToString();
+                    satis.UrunGrup= gridSatisListesi.Rows[i].Cells["UrunGrup"].Value.ToString();
+                }
+            }
+        }
     }
 }
