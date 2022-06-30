@@ -346,6 +346,19 @@ namespace BarkodluSatisProgrami
                     satis.IslemNo = islemNo;
                     satis.UrunAd = gridSatisListesi.Rows[i].Cells["UrunAdi"].Value.ToString();
                     satis.UrunGrup= gridSatisListesi.Rows[i].Cells["UrunGrup"].Value.ToString();
+                    satis.Barkod= gridSatisListesi.Rows[i].Cells["Barkod"].Value.ToString();
+                    satis.Birim= gridSatisListesi.Rows[i].Cells["Birim"].Value.ToString();
+                    satis.AlisFiyat= Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["AlisFiyati"].Value.ToString());
+                    satis.SatisFiyat= Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["Fiyat"].Value.ToString());
+                    satis.Miktar= Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["Miktar"].Value.ToString());
+                    satis.Toplam= Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["Toplam"].Value.ToString());
+                    satis.KdvTutari= Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["KdvTutari"].Value.ToString())* Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["Miktar"].Value.ToString());
+                    satis.OdemeSekli = odemeSekli;
+                    satis.Iade = satisIade;
+                    satis.Tarih=DateTime.Now;
+                    satis.Kullanici = lKullanici.Text;
+                    db.Satis.Add(satis);
+                    db.SaveChanges();
                 }
             }
         }

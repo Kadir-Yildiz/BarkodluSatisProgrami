@@ -130,6 +130,7 @@
             this.bBarkod = new System.Windows.Forms.Button();
             this.bDigerUrun = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.lKullanici = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -192,6 +193,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lKullanici);
             this.panel1.Controls.Add(this.chSatisIadeIslemi);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
@@ -1708,6 +1710,15 @@
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Width = 125;
             // 
+            // lKullanici
+            // 
+            this.lKullanici.AutoSize = true;
+            this.lKullanici.Location = new System.Drawing.Point(227, 28);
+            this.lKullanici.Name = "lKullanici";
+            this.lKullanici.Size = new System.Drawing.Size(73, 16);
+            this.lKullanici.TabIndex = 5;
+            this.lKullanici.Text = "KULLANICI";
+            // 
             // fSatis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1847,6 +1858,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Miktar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Toplam;
         private System.Windows.Forms.DataGridViewImageColumn Sil;
+        private System.Windows.Forms.Label lKullanici;
     }
 }
 
