@@ -40,6 +40,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lKullanici = new System.Windows.Forms.Label();
             this.chSatisIadeIslemi = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -130,7 +131,6 @@
             this.bBarkod = new System.Windows.Forms.Button();
             this.bDigerUrun = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.lKullanici = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -204,6 +204,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(578, 153);
             this.panel1.TabIndex = 0;
+            // 
+            // lKullanici
+            // 
+            this.lKullanici.AutoSize = true;
+            this.lKullanici.Location = new System.Drawing.Point(227, 28);
+            this.lKullanici.Name = "lKullanici";
+            this.lKullanici.Size = new System.Drawing.Size(73, 16);
+            this.lKullanici.TabIndex = 5;
+            this.lKullanici.Text = "KULLANICI";
             // 
             // chSatisIadeIslemi
             // 
@@ -470,6 +479,7 @@
             this.bNakit.Text = "NAKİT\r\n(F1)";
             this.bNakit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.bNakit.UseVisualStyleBackColor = false;
+            this.bNakit.Click += new System.EventHandler(this.bNakit_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -1709,15 +1719,6 @@
             this.dataGridViewImageColumn1.MinimumWidth = 6;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Width = 125;
-            // 
-            // lKullanici
-            // 
-            this.lKullanici.AutoSize = true;
-            this.lKullanici.Location = new System.Drawing.Point(227, 28);
-            this.lKullanici.Name = "lKullanici";
-            this.lKullanici.Size = new System.Drawing.Size(73, 16);
-            this.lKullanici.TabIndex = 5;
-            this.lKullanici.Text = "KULLANICI";
             // 
             // fSatis
             // 

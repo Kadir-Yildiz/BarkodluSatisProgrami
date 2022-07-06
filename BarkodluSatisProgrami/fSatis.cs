@@ -339,7 +339,7 @@ namespace BarkodluSatisProgrami
             double alisFiyatToplam = 0;
             if (satirSayisi>0)
             {
-                int? islemNo = db.Islem.First().IslemNo;
+                int? islemNo = db.Satis.First().IslemNo;
                 Satis satis = new Satis();
                 for (int i = 0; i < satirSayisi; i++)
                 {
@@ -348,7 +348,7 @@ namespace BarkodluSatisProgrami
                     satis.UrunGrup= gridSatisListesi.Rows[i].Cells["UrunGrup"].Value.ToString();
                     satis.Barkod= gridSatisListesi.Rows[i].Cells["Barkod"].Value.ToString();
                     satis.Birim= gridSatisListesi.Rows[i].Cells["Birim"].Value.ToString();
-                    satis.AlisFiyat= Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["AlisFiyati"].Value.ToString());
+                    satis.AlisFiyat= Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["AlisFiyat"].Value.ToString());
                     satis.SatisFiyat= Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["Fiyat"].Value.ToString());
                     satis.Miktar= Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["Miktar"].Value.ToString());
                     satis.Toplam= Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["Toplam"].Value.ToString());
@@ -359,8 +359,14 @@ namespace BarkodluSatisProgrami
                     satis.Kullanici = lKullanici.Text;
                     db.Satis.Add(satis);
                     db.SaveChanges();
+                    MessageBox.Show("başarılı");
                 }
             }
+        }
+
+        private void bNakit_Click(object sender, EventArgs e)
+        {
+            SatisYap("Nakit");
         }
     }
 }
