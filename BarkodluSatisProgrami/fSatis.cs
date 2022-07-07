@@ -339,7 +339,7 @@ namespace BarkodluSatisProgrami
             double alisFiyatToplam = 0;
             if (satirSayisi>0)
             {
-                int? islemNo = db.Satis.First().IslemNo;
+                int islemNo = 1;
                 Satis satis = new Satis();
                 for (int i = 0; i < satirSayisi; i++)
                 {
@@ -359,7 +359,44 @@ namespace BarkodluSatisProgrami
                     satis.Kullanici = lKullanici.Text;
                     db.Satis.Add(satis);
                     db.SaveChanges();
-                    MessageBox.Show("başarılı");
+                    if (!satisIade)
+                    {
+                        Islemler.StokAzalt(gridSatisListesi.Rows[i].Cells["Barkod"].Value.ToString(), Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["Miktar"].Value.ToString()));
+                    }
+                    else
+                    {
+                        Islemler.StokArtir(gridSatisListesi.Rows[i].Cells["Barkod"].Value.ToString(), Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["Miktar"].Value.ToString()));
+                    }
+                    alisFiyatToplam += Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["AlisFiyat"].Value.ToString());
+                    
+                }
+
+                IslemOzet io = new IslemOzet();
+                io.IslemNo = islemNo;
+                io.Iade = satisIade;
+                io.AlisFiyatToplam = alisFiyatToplam;
+                io.Gelir = false;
+                io.Gider = false;
+                if (!satisIade)
+                {
+                    io.Aciklama = odemeSekli + " Satış";
+                }
+                else
+                {
+                    io.Aciklama = "İade işlemi (" + odemeSekli + ") şekilde gerçekleşti.";
+                }
+                io.OdemeSekli = odemeSekli;
+                io.Kullanici = lKullanici.Text;
+                io.Tarih = DateTime.Now;
+                switch (odemeSekli)
+                {
+                    case "Nakit":
+                        io.Nakit = Islemler.DoubleYap(tGenelToplam.Text);
+                        io.Kart = 0; break;
+                    case "Kart":
+                        io.Kart = Islemler.DoubleYap(tGenelToplam.Text);
+                        io.Nakit = 0; break;
+                    
                 }
             }
         }
