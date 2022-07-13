@@ -396,14 +396,28 @@ namespace BarkodluSatisProgrami
                     case "Kart":
                         io.Kart = Islemler.DoubleYap(tGenelToplam.Text);
                         io.Nakit = 0; break;
-                    
+                    case "Kart-Nakit":
+                        io.Nakit = Islemler.DoubleYap(lNakit.Text);
+                        io.Kart = Islemler.DoubleYap(lKart.Text); break;
                 }
+                db.IslemOzet.Add(io);
+                db.SaveChanges();
+
+                var islemNoArtir = db.Islem.First();
+                islemNoArtir.IslemNo += 1;
+                db.SaveChanges();
+                MessageBox.Show("Başarılı");
             }
         }
 
         private void bNakit_Click(object sender, EventArgs e)
         {
             SatisYap("Nakit");
+        }
+
+        private void bKart_Click(object sender, EventArgs e)
+        {
+            SatisYap("Kart");
         }
     }
 }
