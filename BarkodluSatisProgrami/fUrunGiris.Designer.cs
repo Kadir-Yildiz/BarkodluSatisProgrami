@@ -362,7 +362,7 @@
             this.bStandart2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bStandart2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bStandart2.ForeColor = System.Drawing.Color.White;
-            this.bStandart2.Image = ((System.Drawing.Image)(resources.GetObject("bStandart2.Image")));
+            this.bStandart2.Image = global::BarkodluSatisProgrami.Properties.Resources.barcode4832;
             this.bStandart2.Location = new System.Drawing.Point(280, 169);
             this.bStandart2.Margin = new System.Windows.Forms.Padding(1);
             this.bStandart2.Name = "bStandart2";
