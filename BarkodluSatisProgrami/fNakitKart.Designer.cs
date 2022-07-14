@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tBarkod = new System.Windows.Forms.TextBox();
+            this.tNakit = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.bNV = new System.Windows.Forms.Button();
@@ -43,18 +43,20 @@
             this.bN3 = new System.Windows.Forms.Button();
             this.bN2 = new System.Windows.Forms.Button();
             this.bN1 = new System.Windows.Forms.Button();
-            this.bNakit = new System.Windows.Forms.Button();
+            this.bEnter = new System.Windows.Forms.Button();
             this.tableLayoutPanel8.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tBarkod
+            // tNakit
             // 
-            this.tBarkod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tBarkod.Location = new System.Drawing.Point(12, 40);
-            this.tBarkod.Name = "tBarkod";
-            this.tBarkod.Size = new System.Drawing.Size(247, 30);
-            this.tBarkod.TabIndex = 1;
-            this.tBarkod.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tNakit.Location = new System.Drawing.Point(12, 40);
+            this.tNakit.Name = "tNakit";
+            this.tNakit.Size = new System.Drawing.Size(283, 30);
+            this.tNakit.TabIndex = 1;
+            this.tNakit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tNakit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tNakit_KeyDown);
+            this.tNakit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tNakit_KeyPress);
             // 
             // label6
             // 
@@ -111,6 +113,7 @@
             this.bNV.TabIndex = 12;
             this.bNV.Text = ",";
             this.bNV.UseVisualStyleBackColor = false;
+            this.bNV.Click += new System.EventHandler(this.bNx_Click);
             // 
             // bN0
             // 
@@ -127,6 +130,7 @@
             this.bN0.TabIndex = 11;
             this.bN0.Text = "0";
             this.bN0.UseVisualStyleBackColor = false;
+            this.bN0.Click += new System.EventHandler(this.bNx_Click);
             // 
             // bNB
             // 
@@ -143,6 +147,7 @@
             this.bNB.TabIndex = 10;
             this.bNB.Text = "<";
             this.bNB.UseVisualStyleBackColor = false;
+            this.bNB.Click += new System.EventHandler(this.bNx_Click);
             // 
             // bN9
             // 
@@ -159,6 +164,7 @@
             this.bN9.TabIndex = 9;
             this.bN9.Text = "9";
             this.bN9.UseVisualStyleBackColor = false;
+            this.bN9.Click += new System.EventHandler(this.bNx_Click);
             // 
             // bN8
             // 
@@ -175,6 +181,7 @@
             this.bN8.TabIndex = 8;
             this.bN8.Text = "8";
             this.bN8.UseVisualStyleBackColor = false;
+            this.bN8.Click += new System.EventHandler(this.bNx_Click);
             // 
             // bN7
             // 
@@ -191,6 +198,7 @@
             this.bN7.TabIndex = 7;
             this.bN7.Text = "7";
             this.bN7.UseVisualStyleBackColor = false;
+            this.bN7.Click += new System.EventHandler(this.bNx_Click);
             // 
             // bN6
             // 
@@ -207,6 +215,7 @@
             this.bN6.TabIndex = 6;
             this.bN6.Text = "6";
             this.bN6.UseVisualStyleBackColor = false;
+            this.bN6.Click += new System.EventHandler(this.bNx_Click);
             // 
             // bN5
             // 
@@ -223,6 +232,7 @@
             this.bN5.TabIndex = 5;
             this.bN5.Text = "5";
             this.bN5.UseVisualStyleBackColor = false;
+            this.bN5.Click += new System.EventHandler(this.bNx_Click);
             // 
             // bN4
             // 
@@ -239,6 +249,7 @@
             this.bN4.TabIndex = 4;
             this.bN4.Text = "4";
             this.bN4.UseVisualStyleBackColor = false;
+            this.bN4.Click += new System.EventHandler(this.bNx_Click);
             // 
             // bN3
             // 
@@ -255,6 +266,7 @@
             this.bN3.TabIndex = 3;
             this.bN3.Text = "3";
             this.bN3.UseVisualStyleBackColor = false;
+            this.bN3.Click += new System.EventHandler(this.bNx_Click);
             // 
             // bN2
             // 
@@ -271,6 +283,7 @@
             this.bN2.TabIndex = 2;
             this.bN2.Text = "2";
             this.bN2.UseVisualStyleBackColor = false;
+            this.bN2.Click += new System.EventHandler(this.bNx_Click);
             // 
             // bN1
             // 
@@ -287,33 +300,37 @@
             this.bN1.TabIndex = 1;
             this.bN1.Text = "1";
             this.bN1.UseVisualStyleBackColor = false;
+            this.bN1.Click += new System.EventHandler(this.bNx_Click);
             // 
-            // bNakit
+            // bEnter
             // 
-            this.bNakit.BackColor = System.Drawing.Color.Tomato;
-            this.bNakit.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
-            this.bNakit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bNakit.ForeColor = System.Drawing.Color.White;
-            this.bNakit.Location = new System.Drawing.Point(296, 73);
-            this.bNakit.Margin = new System.Windows.Forms.Padding(1);
-            this.bNakit.Name = "bNakit";
-            this.bNakit.Size = new System.Drawing.Size(98, 265);
-            this.bNakit.TabIndex = 6;
-            this.bNakit.Text = "ENTER";
-            this.bNakit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.bNakit.UseVisualStyleBackColor = false;
+            this.bEnter.BackColor = System.Drawing.Color.Tomato;
+            this.bEnter.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
+            this.bEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bEnter.ForeColor = System.Drawing.Color.White;
+            this.bEnter.Location = new System.Drawing.Point(296, 73);
+            this.bEnter.Margin = new System.Windows.Forms.Padding(1);
+            this.bEnter.Name = "bEnter";
+            this.bEnter.Size = new System.Drawing.Size(98, 265);
+            this.bEnter.TabIndex = 6;
+            this.bEnter.Text = "ENTER";
+            this.bEnter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.bEnter.UseVisualStyleBackColor = false;
+            this.bEnter.Click += new System.EventHandler(this.bEnter_Click);
             // 
             // fNakitKart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 366);
-            this.Controls.Add(this.bNakit);
+            this.ClientSize = new System.Drawing.Size(430, 353);
+            this.Controls.Add(this.bEnter);
             this.Controls.Add(this.tableLayoutPanel8);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.tBarkod);
+            this.Controls.Add(this.tNakit);
+            this.MaximumSize = new System.Drawing.Size(448, 400);
             this.Name = "fNakitKart";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fNakitKart";
             this.tableLayoutPanel8.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -323,7 +340,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox tBarkod;
+        private System.Windows.Forms.TextBox tNakit;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Button bNV;
@@ -338,6 +355,6 @@
         private System.Windows.Forms.Button bN3;
         private System.Windows.Forms.Button bN2;
         private System.Windows.Forms.Button bN1;
-        private System.Windows.Forms.Button bNakit;
+        private System.Windows.Forms.Button bEnter;
     }
 }
