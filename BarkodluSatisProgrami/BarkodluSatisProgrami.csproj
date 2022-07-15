@@ -94,6 +94,12 @@
     <Compile Include="fUrunGiris.Designer.cs">
       <DependentUpon>fUrunGiris.cs</DependentUpon>
     </Compile>
+    <Compile Include="fUrunGrubuEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fUrunGrubuEkle.Designer.cs">
+      <DependentUpon>fUrunGrubuEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="HizliUrun.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fUrunGiris.resx">
       <DependentUpon>fUrunGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fUrunGrubuEkle.resx">
+      <DependentUpon>fUrunGrubuEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -204,6 +213,10 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\share %282%29.png" />
+    <None Include="Resources\share %281%29.png" />
+    <None Include="Resources\save24.png" />
+    <None Include="Resources\cancel24.png" />
     <None Include="Resources\barcode4832.png" />
     <None Include="Resources\Ekle20.png" />
   </ItemGroup>

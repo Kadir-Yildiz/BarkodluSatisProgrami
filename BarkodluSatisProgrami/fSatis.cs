@@ -58,7 +58,9 @@ namespace BarkodluSatisProgrami
                         else
                         {
                             Console.Beep(900, 2000);
-                            MessageBox.Show("Normal Ürün Ekleme Sayfası");
+                            fUrunGiris f = new fUrunGiris();
+                            f.tBarkod.Text = barkod;
+                            f.ShowDialog();
                         }
                     }
                 }
