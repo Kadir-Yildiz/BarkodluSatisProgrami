@@ -127,11 +127,14 @@
   <data name="remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="share (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\share (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="barcode4832" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\barcode4832.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="share (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\share (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tl_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tl_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kredikarti" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kredikarti.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,13 +142,13 @@
   <data name="cancel24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tl_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tl_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="share (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\share (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kartnakit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kartnakit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="share (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\share (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="removewhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\removewhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

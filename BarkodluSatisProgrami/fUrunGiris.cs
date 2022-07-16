@@ -81,9 +81,16 @@ namespace BarkodluSatisProgrami
                     urun.Kullanici = lKullanici.Text;
                     db.Urun.Add(urun);
                     db.SaveChanges();
+                    if (tBarkod.Text.Length==8)
+                    {
+                        var ozelBarkod = db.Barkod.First();
+                        ozelBarkod.BarkodNo += 1;
+                        db.SaveChanges();
+                    }
                     Temizle();
 
                     gridUrunler.DataSource = db.Urun.OrderByDescending(a => a.UrunId).Take(10).ToList();
+                    Islemler.GridDuzenle(gridUrunler);
                 }
                 
             }
@@ -110,6 +117,7 @@ namespace BarkodluSatisProgrami
         {
             string urunAd = tUrunAra.Text;
             gridUrunler.DataSource = db.Urun.Where(a => a.UrunAd.Contains(urunAd)).ToList();
+            Islemler.GridDuzenle(gridUrunler);
         }
 
         private void bIptal_Click(object sender, EventArgs e)
@@ -120,6 +128,45 @@ namespace BarkodluSatisProgrami
         private void fUrunGiris_Load(object sender, EventArgs e)
         {
             tUrunSayisi.Text= db.Urun.Count().ToString();
+            gridUrunler.DataSource = db.Urun.OrderByDescending(a => a.UrunId).Take(20).ToList();
+            GrupListele();
+            Islemler.GridDuzenle(gridUrunler);
         }
+
+        public void GrupListele()
+        {
+            cmbUrunGrubu.DisplayMember = "UrunGrupAd";
+            cmbUrunGrubu.ValueMember = "Id";
+            cmbUrunGrubu.DataSource = db.UrunGrup.OrderBy(a => a.UrunGrupAd).ToList();
+        }
+        private void bUrunGrubuEkle_Click(object sender, EventArgs e)
+        {
+            fUrunGrubuEkle f= new fUrunGrubuEkle();
+            f.ShowDialog();
+        }
+
+        private void bBarkodOlustur_Click(object sender, EventArgs e)
+        {
+            var barkodNo = db.Barkod.First();
+            int karakter = barkodNo.BarkodNo.ToString().Length;
+            string sifirlar = string.Empty;
+            for (int i = 0; i < 8-karakter; i++)
+            {
+                sifirlar = sifirlar + "0";
+            }
+            string olusanBarkod = sifirlar + barkodNo.BarkodNo.ToString();
+            tBarkod.Text = olusanBarkod;
+            tUrunAdi.Focus();
+        }
+
+        private void tAlisFiyati_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar)== false && e.KeyChar!=(char)08 && e.KeyChar != (char)44)
+            {
+                e.Handled = true;
+            }
+        }
+
+        
     }
 }

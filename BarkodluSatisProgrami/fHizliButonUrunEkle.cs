@@ -25,6 +25,7 @@ namespace BarkodluSatisProgrami
                 string urunAd = tUrunAra.Text;
                 var urunler = db.Urun.Where(a => a.UrunAd.Contains(urunAd)).ToList();
                 gridUrunler.DataSource = urunler;
+                Islemler.GridDuzenle(gridUrunler);
             }
         }
 
@@ -57,6 +58,7 @@ namespace BarkodluSatisProgrami
             if (chTumu.Checked)
             {
                 gridUrunler.DataSource = db.Urun.ToList();
+                Islemler.GridDuzenle(gridUrunler);
             }
             else
             {

@@ -16,7 +16,7 @@ namespace BarkodluSatisProgrami
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fSatis());
+            Application.Run(new fUrunGiris());
         }
     }
 }
