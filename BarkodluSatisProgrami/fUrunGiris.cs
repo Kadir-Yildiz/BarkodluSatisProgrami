@@ -60,7 +60,6 @@ namespace BarkodluSatisProgrami
                     guncelle.Tarih = DateTime.Now;
                     guncelle.Kullanici = lKullanici.Text;
                     db.SaveChanges();
-                    Temizle();
                     gridUrunler.DataSource = db.Urun.OrderByDescending(a => a.UrunId).Take(10).ToList();
                     MessageBox.Show("Değişiklikler Kaydedildi!");
                 }
@@ -87,12 +86,12 @@ namespace BarkodluSatisProgrami
                         ozelBarkod.BarkodNo += 1;
                         db.SaveChanges();
                     }
-                    Temizle();
 
-                    gridUrunler.DataSource = db.Urun.OrderByDescending(a => a.UrunId).Take(10).ToList();
+                    gridUrunler.DataSource = db.Urun.OrderByDescending(a => a.UrunId).Take(20).ToList();
                     Islemler.GridDuzenle(gridUrunler);
                 }
-                
+                Islemler.StokHareket(tBarkod.Text, tUrunAdi.Text,"Adet", Convert.ToDouble(tMiktar.Text),cmbUrunGrubu.Text, lKullanici.Text);
+                    Temizle();
             }
             else
             {
@@ -167,6 +166,33 @@ namespace BarkodluSatisProgrami
             }
         }
 
-        
+        private void silToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (gridUrunler.Rows.Count>0)
+            {
+                int urunId = Convert.ToInt32(gridUrunler.CurrentRow.Cells["UrunId"].Value.ToString());
+                string urunAd = gridUrunler.CurrentRow.Cells["UrunAd"].Value.ToString();
+                string barkod = gridUrunler.CurrentRow.Cells["Barkod"].Value.ToString();
+                DialogResult onay = MessageBox.Show(urunAd + " ürününü silmek istiyor musunuz?", "Ürün Silme İşlemi", MessageBoxButtons.YesNo);
+                if (onay == DialogResult.Yes)
+                {
+                    var urun = db.Urun.Find(urunId);
+                    db.Urun.Remove(urun);
+                    db.SaveChanges();
+                    var hizliUrun = db.HizliUrun.Where(x => x.Barkod == barkod).SingleOrDefault();
+                    if (hizliUrun!=null)
+                    {
+                        hizliUrun.Barkod = "-";
+                        hizliUrun.UrunAd = "-";
+                        hizliUrun.Fiyat = 0;
+                        db.SaveChanges();
+                    }
+                    MessageBox.Show("Ürün Silinmiştir!");
+                    tBarkod.Focus();
+                    gridUrunler.DataSource = db.Urun.OrderByDescending(a => a.UrunId).Take(20).ToList();
+                    Islemler.GridDuzenle(gridUrunler);
+                } 
+            }
+        }
     }
 }

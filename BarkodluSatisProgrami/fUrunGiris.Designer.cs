@@ -28,12 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.tAlisFiyati = new System.Windows.Forms.TextBox();
+            this.tSatisFiyati = new System.Windows.Forms.TextBox();
             this.cmbUrunGrubu = new System.Windows.Forms.ComboBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lKullanici = new BarkodluSatisProgrami.lStandart();
             this.bRaporAl = new BarkodluSatisProgrami.bStandart();
             this.tUrunSayisi = new BarkodluSatisProgrami.tNumeric();
@@ -58,12 +63,11 @@
             this.lStandart2 = new BarkodluSatisProgrami.lStandart();
             this.lStandart1 = new BarkodluSatisProgrami.lStandart();
             this.gridUrunler = new BarkodluSatisProgrami.gridOzel();
-            this.tSatisFiyati = new System.Windows.Forms.TextBox();
-            this.tAlisFiyati = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridUrunler)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,8 +111,30 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.gridUrunler);
             this.splitContainer1.Size = new System.Drawing.Size(1225, 767);
-            this.splitContainer1.SplitterDistance = 347;
+            this.splitContainer1.SplitterDistance = 358;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // tAlisFiyati
+            // 
+            this.tAlisFiyati.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tAlisFiyati.Location = new System.Drawing.Point(627, 27);
+            this.tAlisFiyati.Name = "tAlisFiyati";
+            this.tAlisFiyati.Size = new System.Drawing.Size(147, 30);
+            this.tAlisFiyati.TabIndex = 4;
+            this.tAlisFiyati.Text = "0";
+            this.tAlisFiyati.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tAlisFiyati.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tAlisFiyati_KeyPress);
+            // 
+            // tSatisFiyati
+            // 
+            this.tSatisFiyati.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tSatisFiyati.Location = new System.Drawing.Point(627, 63);
+            this.tSatisFiyati.Name = "tSatisFiyati";
+            this.tSatisFiyati.Size = new System.Drawing.Size(147, 30);
+            this.tSatisFiyati.TabIndex = 5;
+            this.tSatisFiyati.Text = "0";
+            this.tSatisFiyati.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tSatisFiyati.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tAlisFiyati_KeyPress);
             // 
             // cmbUrunGrubu
             // 
@@ -118,6 +144,21 @@
             this.cmbUrunGrubu.Name = "cmbUrunGrubu";
             this.cmbUrunGrubu.Size = new System.Drawing.Size(323, 30);
             this.cmbUrunGrubu.TabIndex = 3;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.silToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(95, 28);
+            // 
+            // silToolStripMenuItem
+            // 
+            this.silToolStripMenuItem.Name = "silToolStripMenuItem";
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
+            this.silToolStripMenuItem.Text = "Sil";
+            this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
             // 
             // lKullanici
             // 
@@ -449,35 +490,14 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridUrunler.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.gridUrunler.RowTemplate.ContextMenuStrip = this.contextMenuStrip1;
             this.gridUrunler.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
             this.gridUrunler.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Silver;
             this.gridUrunler.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.gridUrunler.RowTemplate.Height = 32;
             this.gridUrunler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridUrunler.Size = new System.Drawing.Size(1225, 416);
+            this.gridUrunler.Size = new System.Drawing.Size(1225, 405);
             this.gridUrunler.TabIndex = 0;
-            // 
-            // tSatisFiyati
-            // 
-            this.tSatisFiyati.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tSatisFiyati.Location = new System.Drawing.Point(627, 63);
-            this.tSatisFiyati.Name = "tSatisFiyati";
-            this.tSatisFiyati.Size = new System.Drawing.Size(147, 30);
-            this.tSatisFiyati.TabIndex = 5;
-            this.tSatisFiyati.Text = "0";
-            this.tSatisFiyati.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.tSatisFiyati.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tAlisFiyati_KeyPress);
-            // 
-            // tAlisFiyati
-            // 
-            this.tAlisFiyati.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tAlisFiyati.Location = new System.Drawing.Point(627, 27);
-            this.tAlisFiyati.Name = "tAlisFiyati";
-            this.tAlisFiyati.Size = new System.Drawing.Size(147, 30);
-            this.tAlisFiyati.TabIndex = 4;
-            this.tAlisFiyati.Text = "0";
-            this.tAlisFiyati.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.tAlisFiyati.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tAlisFiyati_KeyPress);
             // 
             // fUrunGiris
             // 
@@ -495,6 +515,7 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridUrunler)).EndInit();
             this.ResumeLayout(false);
 
@@ -530,5 +551,7 @@
         public System.Windows.Forms.ComboBox cmbUrunGrubu;
         private System.Windows.Forms.TextBox tAlisFiyati;
         private System.Windows.Forms.TextBox tSatisFiyati;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem silToolStripMenuItem;
     }
 }

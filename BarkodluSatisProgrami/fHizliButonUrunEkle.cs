@@ -58,6 +58,11 @@ namespace BarkodluSatisProgrami
             if (chTumu.Checked)
             {
                 gridUrunler.DataSource = db.Urun.ToList();
+                gridUrunler.Columns["AlisFiyat"].Visible = false;
+                gridUrunler.Columns["SatisFiyat"].Visible = false;
+                gridUrunler.Columns["KdvOrani"].Visible = false;
+                gridUrunler.Columns["KdvTutari"].Visible = false;
+                gridUrunler.Columns["Miktar"].Visible = false;
                 Islemler.GridDuzenle(gridUrunler);
             }
             else

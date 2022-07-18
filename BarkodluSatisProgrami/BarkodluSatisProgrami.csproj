@@ -91,6 +91,12 @@
     <Compile Include="fSatis.Designer.cs">
       <DependentUpon>fSatis.cs</DependentUpon>
     </Compile>
+    <Compile Include="fStok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fStok.Designer.cs">
+      <DependentUpon>fStok.cs</DependentUpon>
+    </Compile>
     <Compile Include="fUrunGiris.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     <Compile Include="Satis.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="StokHareket.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Terazi.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -151,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fSatis.resx">
       <DependentUpon>fSatis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fStok.resx">
+      <DependentUpon>fStok.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fUrunGiris.resx">
       <DependentUpon>fUrunGiris.cs</DependentUpon>
@@ -219,6 +231,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\ara3232.png" />
     <None Include="Resources\removewhite.png" />
     <None Include="Resources\share %282%29.png" />
     <None Include="Resources\share %281%29.png" />

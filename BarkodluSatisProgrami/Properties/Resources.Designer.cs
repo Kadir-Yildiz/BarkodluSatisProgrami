@@ -63,6 +63,16 @@ namespace BarkodluSatisProgrami.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ara3232 {
+            get {
+                object obj = ResourceManager.GetObject("ara3232", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap barcode4832 {
             get {
                 object obj = ResourceManager.GetObject("barcode4832", resourceCulture);
