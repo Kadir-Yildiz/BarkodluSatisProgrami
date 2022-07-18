@@ -43,6 +43,7 @@ namespace BarkodluSatisProgrami
                     {
                         DateTime baslangic = DateTime.Parse(dateBaslangic.Value.ToShortDateString());
                         DateTime bitis = DateTime.Parse(dateBitis.Value.ToShortDateString());
+                        bitis = bitis.AddDays(1);
                         if (rdTumu.Checked)
                         {
                             db.StokHareket.OrderByDescending(x => x.Tarih).Where(x => x.Tarih >= baslangic && x.Tarih <= bitis).Load();
@@ -50,7 +51,7 @@ namespace BarkodluSatisProgrami
                         }
                         else if (rdUrunGrubunaGore.Checked)
                         {
-                            db.StokHareket.OrderByDescending(x => x.Tarih).Where(x => x.Tarih >= baslangic && x.Tarih <= bitis).Load();
+                            db.StokHareket.OrderByDescending(x => x.Tarih).Where(x => x.Tarih >= baslangic && x.Tarih <= bitis && x.UrunGrup.Contains(urunGrubu)).Load();
                             gridListe.DataSource = db.StokHareket.Local.ToBindingList();
                         }
                     }

@@ -28,30 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.tUrunAra = new BarkodluSatisProgrami.tStandart();
+            this.lStandart6 = new BarkodluSatisProgrami.lStandart();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rdUrunGrubunaGore = new System.Windows.Forms.RadioButton();
             this.rdTumu = new System.Windows.Forms.RadioButton();
+            this.lStandart2 = new BarkodluSatisProgrami.lStandart();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cmbUrunGrubu = new System.Windows.Forms.ComboBox();
+            this.lStandart3 = new BarkodluSatisProgrami.lStandart();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dateBitis = new System.Windows.Forms.DateTimePicker();
+            this.lStandart5 = new BarkodluSatisProgrami.lStandart();
             this.dateBaslangic = new System.Windows.Forms.DateTimePicker();
+            this.lStandart4 = new BarkodluSatisProgrami.lStandart();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lStandart1 = new BarkodluSatisProgrami.lStandart();
             this.cmbIslemTuru = new System.Windows.Forms.ComboBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.lStandart1 = new BarkodluSatisProgrami.lStandart();
             this.bAra = new BarkodluSatisProgrami.bStandart();
-            this.lStandart5 = new BarkodluSatisProgrami.lStandart();
-            this.lStandart4 = new BarkodluSatisProgrami.lStandart();
-            this.lStandart3 = new BarkodluSatisProgrami.lStandart();
-            this.lStandart2 = new BarkodluSatisProgrami.lStandart();
-            this.tUrunAra = new BarkodluSatisProgrami.tStandart();
-            this.lStandart6 = new BarkodluSatisProgrami.lStandart();
             this.gridListe = new BarkodluSatisProgrami.gridOzel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
@@ -92,6 +92,26 @@
             this.splitContainer2.SplitterDistance = 74;
             this.splitContainer2.TabIndex = 0;
             // 
+            // tUrunAra
+            // 
+            this.tUrunAra.BackColor = System.Drawing.Color.White;
+            this.tUrunAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tUrunAra.Location = new System.Drawing.Point(134, 25);
+            this.tUrunAra.Name = "tUrunAra";
+            this.tUrunAra.Size = new System.Drawing.Size(250, 30);
+            this.tUrunAra.TabIndex = 1;
+            // 
+            // lStandart6
+            // 
+            this.lStandart6.AutoSize = true;
+            this.lStandart6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart6.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart6.Location = new System.Drawing.Point(26, 28);
+            this.lStandart6.Name = "lStandart6";
+            this.lStandart6.Size = new System.Drawing.Size(90, 25);
+            this.lStandart6.TabIndex = 0;
+            this.lStandart6.Text = "Ürün Ara";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -129,6 +149,17 @@
             this.rdTumu.Text = "Tümü";
             this.rdTumu.UseVisualStyleBackColor = true;
             // 
+            // lStandart2
+            // 
+            this.lStandart2.AutoSize = true;
+            this.lStandart2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart2.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lStandart2.Location = new System.Drawing.Point(19, 15);
+            this.lStandart2.Name = "lStandart2";
+            this.lStandart2.Size = new System.Drawing.Size(142, 25);
+            this.lStandart2.TabIndex = 2;
+            this.lStandart2.Text = "Filtreleme Türü";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -150,6 +181,17 @@
             this.cmbUrunGrubu.Size = new System.Drawing.Size(290, 30);
             this.cmbUrunGrubu.TabIndex = 5;
             // 
+            // lStandart3
+            // 
+            this.lStandart3.AutoSize = true;
+            this.lStandart3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart3.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lStandart3.Location = new System.Drawing.Point(3, 29);
+            this.lStandart3.Name = "lStandart3";
+            this.lStandart3.Size = new System.Drawing.Size(113, 25);
+            this.lStandart3.TabIndex = 5;
+            this.lStandart3.Text = "Ürün Grubu";
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -170,6 +212,17 @@
             this.dateBitis.Size = new System.Drawing.Size(290, 28);
             this.dateBitis.TabIndex = 9;
             // 
+            // lStandart5
+            // 
+            this.lStandart5.AutoSize = true;
+            this.lStandart5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart5.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lStandart5.Location = new System.Drawing.Point(3, 101);
+            this.lStandart5.Name = "lStandart5";
+            this.lStandart5.Size = new System.Drawing.Size(102, 25);
+            this.lStandart5.TabIndex = 8;
+            this.lStandart5.Text = "Bitiş Tarihi";
+            // 
             // dateBaslangic
             // 
             this.dateBaslangic.CalendarMonthBackground = System.Drawing.Color.Wheat;
@@ -178,6 +231,17 @@
             this.dateBaslangic.Name = "dateBaslangic";
             this.dateBaslangic.Size = new System.Drawing.Size(290, 28);
             this.dateBaslangic.TabIndex = 7;
+            // 
+            // lStandart4
+            // 
+            this.lStandart4.AutoSize = true;
+            this.lStandart4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart4.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lStandart4.Location = new System.Drawing.Point(3, 13);
+            this.lStandart4.Name = "lStandart4";
+            this.lStandart4.Size = new System.Drawing.Size(151, 25);
+            this.lStandart4.TabIndex = 6;
+            this.lStandart4.Text = "Başlangıç Tarihi";
             // 
             // panel4
             // 
@@ -188,6 +252,17 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(322, 107);
             this.panel4.TabIndex = 6;
+            // 
+            // lStandart1
+            // 
+            this.lStandart1.AutoSize = true;
+            this.lStandart1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lStandart1.Location = new System.Drawing.Point(19, 12);
+            this.lStandart1.Name = "lStandart1";
+            this.lStandart1.Size = new System.Drawing.Size(104, 25);
+            this.lStandart1.TabIndex = 0;
+            this.lStandart1.Text = "İşlem Türü";
             // 
             // cmbIslemTuru
             // 
@@ -228,17 +303,6 @@
             this.splitContainer1.SplitterDistance = 275;
             this.splitContainer1.TabIndex = 0;
             // 
-            // lStandart1
-            // 
-            this.lStandart1.AutoSize = true;
-            this.lStandart1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lStandart1.Location = new System.Drawing.Point(19, 12);
-            this.lStandart1.Name = "lStandart1";
-            this.lStandart1.Size = new System.Drawing.Size(104, 25);
-            this.lStandart1.TabIndex = 0;
-            this.lStandart1.Text = "İşlem Türü";
-            // 
             // bAra
             // 
             this.bAra.BackColor = System.Drawing.Color.Tomato;
@@ -258,117 +322,53 @@
             this.bAra.UseVisualStyleBackColor = false;
             this.bAra.Click += new System.EventHandler(this.bAra_Click);
             // 
-            // lStandart5
-            // 
-            this.lStandart5.AutoSize = true;
-            this.lStandart5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart5.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lStandart5.Location = new System.Drawing.Point(3, 101);
-            this.lStandart5.Name = "lStandart5";
-            this.lStandart5.Size = new System.Drawing.Size(102, 25);
-            this.lStandart5.TabIndex = 8;
-            this.lStandart5.Text = "Bitiş Tarihi";
-            // 
-            // lStandart4
-            // 
-            this.lStandart4.AutoSize = true;
-            this.lStandart4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart4.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lStandart4.Location = new System.Drawing.Point(3, 13);
-            this.lStandart4.Name = "lStandart4";
-            this.lStandart4.Size = new System.Drawing.Size(151, 25);
-            this.lStandart4.TabIndex = 6;
-            this.lStandart4.Text = "Başlangıç Tarihi";
-            // 
-            // lStandart3
-            // 
-            this.lStandart3.AutoSize = true;
-            this.lStandart3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart3.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lStandart3.Location = new System.Drawing.Point(3, 29);
-            this.lStandart3.Name = "lStandart3";
-            this.lStandart3.Size = new System.Drawing.Size(113, 25);
-            this.lStandart3.TabIndex = 5;
-            this.lStandart3.Text = "Ürün Grubu";
-            // 
-            // lStandart2
-            // 
-            this.lStandart2.AutoSize = true;
-            this.lStandart2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lStandart2.Location = new System.Drawing.Point(19, 15);
-            this.lStandart2.Name = "lStandart2";
-            this.lStandart2.Size = new System.Drawing.Size(142, 25);
-            this.lStandart2.TabIndex = 2;
-            this.lStandart2.Text = "Filtreleme Türü";
-            // 
-            // tUrunAra
-            // 
-            this.tUrunAra.BackColor = System.Drawing.Color.White;
-            this.tUrunAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tUrunAra.Location = new System.Drawing.Point(134, 25);
-            this.tUrunAra.Name = "tUrunAra";
-            this.tUrunAra.Size = new System.Drawing.Size(250, 30);
-            this.tUrunAra.TabIndex = 1;
-            // 
-            // lStandart6
-            // 
-            this.lStandart6.AutoSize = true;
-            this.lStandart6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart6.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart6.Location = new System.Drawing.Point(26, 28);
-            this.lStandart6.Name = "lStandart6";
-            this.lStandart6.Size = new System.Drawing.Size(90, 25);
-            this.lStandart6.TabIndex = 0;
-            this.lStandart6.Text = "Ürün Ara";
-            // 
             // gridListe
             // 
             this.gridListe.AllowUserToAddRows = false;
             this.gridListe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridListe.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridListe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridListe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridListe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridListe.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridListe.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridListe.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridListe.EnableHeadersVisualStyles = false;
             this.gridListe.Location = new System.Drawing.Point(0, 0);
             this.gridListe.Name = "gridListe";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridListe.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridListe.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridListe.RowHeadersVisible = false;
             this.gridListe.RowHeadersWidth = 51;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridListe.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridListe.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.gridListe.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
             this.gridListe.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Silver;
             this.gridListe.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
