@@ -335,6 +335,8 @@ namespace BarkodluSatisProgrami
             tNumarator.Clear();
             gridSatisListesi.Rows.Clear();
             tBarkod.Focus();
+            chSatisIadeIslemi.Checked = false;
+            chSatisIadeIslemi.Text = "Satış Yapılıyor";
         }
 
         public void SatisYap(string odemeSekli)
@@ -511,5 +513,7 @@ namespace BarkodluSatisProgrami
                 }
             }
         }
+
+        
     }
 }

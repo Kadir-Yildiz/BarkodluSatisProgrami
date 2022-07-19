@@ -43,6 +43,13 @@ namespace BarkodluSatisProgrami
 
                     tGiderNakit.Text = Convert.ToDouble(islemOzet.Where(x => x.Gider == true).Sum(x => x.Nakit)).ToString("C2");
                     tGiderKart.Text = Convert.ToDouble(islemOzet.Where(x => x.Gider == true).Sum(x => x.Kart)).ToString("C2");
+
+                    db.Satis.Where(x => x.Tarih >= baslangic && x.Tarih <= bitis).Load();
+                    var satisTablosu = db.Satis.Local.ToBindingList();
+                    double kdvTutariSatis = Islemler.DoubleYap(satisTablosu.Where(x => x.Iade == false).Sum(x => x.KdvTutari).ToString());
+                    double kdvTutariIade = Islemler.DoubleYap(satisTablosu.Where(x => x.Iade == true).Sum(x => x.KdvTutari).ToString());
+                    tKdvToplam.Text = (kdvTutariSatis - kdvTutariIade).ToString("C2");
+
                 }
             }
 
@@ -54,6 +61,7 @@ namespace BarkodluSatisProgrami
         private void fRapor_Load(object sender, EventArgs e)
         {
             listFiltrelemeTuru.SelectedIndex = 0;
+            tKartKomisyon.Text = Islemler.KartKomisyon().ToString();
         }
     }
 }
