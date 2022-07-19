@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.lStandart17 = new BarkodluSatisProgrami.lStandart();
             this.lStandart16 = new BarkodluSatisProgrami.lStandart();
@@ -150,10 +150,11 @@
             // 
             this.tKartKomisyon.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tKartKomisyon.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tKartKomisyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.tKartKomisyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.tKartKomisyon.Location = new System.Drawing.Point(898, 245);
             this.tKartKomisyon.Name = "tKartKomisyon";
-            this.tKartKomisyon.Size = new System.Drawing.Size(115, 23);
+            this.tKartKomisyon.ReadOnly = true;
+            this.tKartKomisyon.Size = new System.Drawing.Size(115, 19);
             this.tKartKomisyon.TabIndex = 36;
             this.tKartKomisyon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -161,10 +162,11 @@
             // 
             this.tKdvToplam.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tKdvToplam.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tKdvToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.tKdvToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.tKdvToplam.Location = new System.Drawing.Point(690, 245);
             this.tKdvToplam.Name = "tKdvToplam";
-            this.tKdvToplam.Size = new System.Drawing.Size(115, 23);
+            this.tKdvToplam.ReadOnly = true;
+            this.tKdvToplam.Size = new System.Drawing.Size(115, 19);
             this.tKdvToplam.TabIndex = 35;
             this.tKdvToplam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -183,10 +185,11 @@
             // 
             this.tGiderKart.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tGiderKart.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tGiderKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.tGiderKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.tGiderKart.Location = new System.Drawing.Point(1102, 245);
             this.tGiderKart.Name = "tGiderKart";
-            this.tGiderKart.Size = new System.Drawing.Size(115, 23);
+            this.tGiderKart.ReadOnly = true;
+            this.tGiderKart.Size = new System.Drawing.Size(115, 19);
             this.tGiderKart.TabIndex = 33;
             this.tGiderKart.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -194,10 +197,11 @@
             // 
             this.tGiderNakit.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tGiderNakit.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tGiderNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.tGiderNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.tGiderNakit.Location = new System.Drawing.Point(1102, 202);
             this.tGiderNakit.Name = "tGiderNakit";
-            this.tGiderNakit.Size = new System.Drawing.Size(115, 23);
+            this.tGiderNakit.ReadOnly = true;
+            this.tGiderNakit.Size = new System.Drawing.Size(115, 19);
             this.tGiderNakit.TabIndex = 32;
             this.tGiderNakit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -238,10 +242,11 @@
             // 
             this.tGelirKart.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tGelirKart.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tGelirKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.tGelirKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.tGelirKart.Location = new System.Drawing.Point(1102, 108);
             this.tGelirKart.Name = "tGelirKart";
-            this.tGelirKart.Size = new System.Drawing.Size(115, 23);
+            this.tGelirKart.ReadOnly = true;
+            this.tGelirKart.Size = new System.Drawing.Size(115, 19);
             this.tGelirKart.TabIndex = 28;
             this.tGelirKart.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -249,10 +254,11 @@
             // 
             this.tGelirNakit.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tGelirNakit.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tGelirNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.tGelirNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.tGelirNakit.Location = new System.Drawing.Point(1102, 65);
             this.tGelirNakit.Name = "tGelirNakit";
-            this.tGelirNakit.Size = new System.Drawing.Size(115, 23);
+            this.tGelirNakit.ReadOnly = true;
+            this.tGelirNakit.Size = new System.Drawing.Size(115, 19);
             this.tGelirNakit.TabIndex = 27;
             this.tGelirNakit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -293,10 +299,11 @@
             // 
             this.tIadeKart.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tIadeKart.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tIadeKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.tIadeKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.tIadeKart.Location = new System.Drawing.Point(898, 108);
             this.tIadeKart.Name = "tIadeKart";
-            this.tIadeKart.Size = new System.Drawing.Size(115, 23);
+            this.tIadeKart.ReadOnly = true;
+            this.tIadeKart.Size = new System.Drawing.Size(115, 19);
             this.tIadeKart.TabIndex = 23;
             this.tIadeKart.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -304,10 +311,11 @@
             // 
             this.tIadeNakit.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tIadeNakit.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tIadeNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.tIadeNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.tIadeNakit.Location = new System.Drawing.Point(898, 65);
             this.tIadeNakit.Name = "tIadeNakit";
-            this.tIadeNakit.Size = new System.Drawing.Size(115, 23);
+            this.tIadeNakit.ReadOnly = true;
+            this.tIadeNakit.Size = new System.Drawing.Size(115, 19);
             this.tIadeNakit.TabIndex = 22;
             this.tIadeNakit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -348,10 +356,11 @@
             // 
             this.tSatisKart.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tSatisKart.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tSatisKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.tSatisKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.tSatisKart.Location = new System.Drawing.Point(690, 108);
             this.tSatisKart.Name = "tSatisKart";
-            this.tSatisKart.Size = new System.Drawing.Size(115, 23);
+            this.tSatisKart.ReadOnly = true;
+            this.tSatisKart.Size = new System.Drawing.Size(115, 19);
             this.tSatisKart.TabIndex = 18;
             this.tSatisKart.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -359,10 +368,11 @@
             // 
             this.tSatisNakit.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tSatisNakit.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tSatisNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.tSatisNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.tSatisNakit.Location = new System.Drawing.Point(690, 65);
             this.tSatisNakit.Name = "tSatisNakit";
-            this.tSatisNakit.Size = new System.Drawing.Size(115, 23);
+            this.tSatisNakit.ReadOnly = true;
+            this.tSatisNakit.Size = new System.Drawing.Size(115, 19);
             this.tSatisNakit.TabIndex = 17;
             this.tSatisNakit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -462,49 +472,49 @@
             this.gridListe.AllowUserToDeleteRows = false;
             this.gridListe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridListe.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridListe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridListe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridListe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridListe.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridListe.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridListe.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridListe.EnableHeadersVisualStyles = false;
             this.gridListe.Location = new System.Drawing.Point(0, 0);
             this.gridListe.Name = "gridListe";
             this.gridListe.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridListe.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridListe.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridListe.RowHeadersVisible = false;
             this.gridListe.RowHeadersWidth = 51;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridListe.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridListe.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.gridListe.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
             this.gridListe.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Silver;
             this.gridListe.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
@@ -565,6 +575,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "fRapor";
             this.Text = "Raporlama Sayfası ";
+            this.Load += new System.EventHandler(this.fRapor_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
