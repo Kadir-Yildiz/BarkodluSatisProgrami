@@ -33,25 +33,25 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.tUrunAra = new BarkodluSatisProgrami.tStandart();
-            this.lStandart6 = new BarkodluSatisProgrami.lStandart();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rdUrunGrubunaGore = new System.Windows.Forms.RadioButton();
             this.rdTumu = new System.Windows.Forms.RadioButton();
-            this.lStandart2 = new BarkodluSatisProgrami.lStandart();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cmbUrunGrubu = new System.Windows.Forms.ComboBox();
-            this.lStandart3 = new BarkodluSatisProgrami.lStandart();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dateBitis = new System.Windows.Forms.DateTimePicker();
-            this.lStandart5 = new BarkodluSatisProgrami.lStandart();
             this.dateBaslangic = new System.Windows.Forms.DateTimePicker();
-            this.lStandart4 = new BarkodluSatisProgrami.lStandart();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lStandart1 = new BarkodluSatisProgrami.lStandart();
             this.cmbIslemTuru = new System.Windows.Forms.ComboBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.lStandart1 = new BarkodluSatisProgrami.lStandart();
             this.bAra = new BarkodluSatisProgrami.bStandart();
+            this.lStandart5 = new BarkodluSatisProgrami.lStandart();
+            this.lStandart4 = new BarkodluSatisProgrami.lStandart();
+            this.lStandart3 = new BarkodluSatisProgrami.lStandart();
+            this.lStandart2 = new BarkodluSatisProgrami.lStandart();
+            this.tUrunAra = new BarkodluSatisProgrami.tStandart();
+            this.lStandart6 = new BarkodluSatisProgrami.lStandart();
             this.gridListe = new BarkodluSatisProgrami.gridOzel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
@@ -92,26 +92,6 @@
             this.splitContainer2.SplitterDistance = 74;
             this.splitContainer2.TabIndex = 0;
             // 
-            // tUrunAra
-            // 
-            this.tUrunAra.BackColor = System.Drawing.Color.White;
-            this.tUrunAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tUrunAra.Location = new System.Drawing.Point(134, 25);
-            this.tUrunAra.Name = "tUrunAra";
-            this.tUrunAra.Size = new System.Drawing.Size(250, 30);
-            this.tUrunAra.TabIndex = 1;
-            // 
-            // lStandart6
-            // 
-            this.lStandart6.AutoSize = true;
-            this.lStandart6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart6.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart6.Location = new System.Drawing.Point(26, 28);
-            this.lStandart6.Name = "lStandart6";
-            this.lStandart6.Size = new System.Drawing.Size(90, 25);
-            this.lStandart6.TabIndex = 0;
-            this.lStandart6.Text = "Ürün Ara";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -135,6 +115,7 @@
             this.rdUrunGrubunaGore.TabStop = true;
             this.rdUrunGrubunaGore.Text = "Ürün Grubuna Göre";
             this.rdUrunGrubunaGore.UseVisualStyleBackColor = true;
+            this.rdUrunGrubunaGore.CheckedChanged += new System.EventHandler(this.rdUrunGrubunaGore_CheckedChanged);
             // 
             // rdTumu
             // 
@@ -148,17 +129,7 @@
             this.rdTumu.TabStop = true;
             this.rdTumu.Text = "Tümü";
             this.rdTumu.UseVisualStyleBackColor = true;
-            // 
-            // lStandart2
-            // 
-            this.lStandart2.AutoSize = true;
-            this.lStandart2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lStandart2.Location = new System.Drawing.Point(19, 15);
-            this.lStandart2.Name = "lStandart2";
-            this.lStandart2.Size = new System.Drawing.Size(142, 25);
-            this.lStandart2.TabIndex = 2;
-            this.lStandart2.Text = "Filtreleme Türü";
+            this.rdTumu.CheckedChanged += new System.EventHandler(this.rdTumu_CheckedChanged);
             // 
             // panel2
             // 
@@ -181,17 +152,6 @@
             this.cmbUrunGrubu.Size = new System.Drawing.Size(290, 30);
             this.cmbUrunGrubu.TabIndex = 5;
             // 
-            // lStandart3
-            // 
-            this.lStandart3.AutoSize = true;
-            this.lStandart3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart3.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lStandart3.Location = new System.Drawing.Point(3, 29);
-            this.lStandart3.Name = "lStandart3";
-            this.lStandart3.Size = new System.Drawing.Size(113, 25);
-            this.lStandart3.TabIndex = 5;
-            this.lStandart3.Text = "Ürün Grubu";
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -212,17 +172,6 @@
             this.dateBitis.Size = new System.Drawing.Size(290, 28);
             this.dateBitis.TabIndex = 9;
             // 
-            // lStandart5
-            // 
-            this.lStandart5.AutoSize = true;
-            this.lStandart5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart5.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lStandart5.Location = new System.Drawing.Point(3, 101);
-            this.lStandart5.Name = "lStandart5";
-            this.lStandart5.Size = new System.Drawing.Size(102, 25);
-            this.lStandart5.TabIndex = 8;
-            this.lStandart5.Text = "Bitiş Tarihi";
-            // 
             // dateBaslangic
             // 
             this.dateBaslangic.CalendarMonthBackground = System.Drawing.Color.Wheat;
@@ -231,17 +180,6 @@
             this.dateBaslangic.Name = "dateBaslangic";
             this.dateBaslangic.Size = new System.Drawing.Size(290, 28);
             this.dateBaslangic.TabIndex = 7;
-            // 
-            // lStandart4
-            // 
-            this.lStandart4.AutoSize = true;
-            this.lStandart4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart4.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lStandart4.Location = new System.Drawing.Point(3, 13);
-            this.lStandart4.Name = "lStandart4";
-            this.lStandart4.Size = new System.Drawing.Size(151, 25);
-            this.lStandart4.TabIndex = 6;
-            this.lStandart4.Text = "Başlangıç Tarihi";
             // 
             // panel4
             // 
@@ -252,17 +190,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(322, 107);
             this.panel4.TabIndex = 6;
-            // 
-            // lStandart1
-            // 
-            this.lStandart1.AutoSize = true;
-            this.lStandart1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lStandart1.Location = new System.Drawing.Point(19, 12);
-            this.lStandart1.Name = "lStandart1";
-            this.lStandart1.Size = new System.Drawing.Size(104, 25);
-            this.lStandart1.TabIndex = 0;
-            this.lStandart1.Text = "İşlem Türü";
             // 
             // cmbIslemTuru
             // 
@@ -277,6 +204,7 @@
             this.cmbIslemTuru.Name = "cmbIslemTuru";
             this.cmbIslemTuru.Size = new System.Drawing.Size(274, 30);
             this.cmbIslemTuru.TabIndex = 1;
+            this.cmbIslemTuru.SelectedIndexChanged += new System.EventHandler(this.cmbIslemTuru_SelectedIndexChanged);
             // 
             // splitContainer1
             // 
@@ -303,6 +231,17 @@
             this.splitContainer1.SplitterDistance = 275;
             this.splitContainer1.TabIndex = 0;
             // 
+            // lStandart1
+            // 
+            this.lStandart1.AutoSize = true;
+            this.lStandart1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lStandart1.Location = new System.Drawing.Point(19, 12);
+            this.lStandart1.Name = "lStandart1";
+            this.lStandart1.Size = new System.Drawing.Size(104, 25);
+            this.lStandart1.TabIndex = 0;
+            this.lStandart1.Text = "İşlem Türü";
+            // 
             // bAra
             // 
             this.bAra.BackColor = System.Drawing.Color.Tomato;
@@ -322,9 +261,75 @@
             this.bAra.UseVisualStyleBackColor = false;
             this.bAra.Click += new System.EventHandler(this.bAra_Click);
             // 
+            // lStandart5
+            // 
+            this.lStandart5.AutoSize = true;
+            this.lStandart5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart5.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lStandart5.Location = new System.Drawing.Point(3, 101);
+            this.lStandart5.Name = "lStandart5";
+            this.lStandart5.Size = new System.Drawing.Size(102, 25);
+            this.lStandart5.TabIndex = 8;
+            this.lStandart5.Text = "Bitiş Tarihi";
+            // 
+            // lStandart4
+            // 
+            this.lStandart4.AutoSize = true;
+            this.lStandart4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart4.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lStandart4.Location = new System.Drawing.Point(3, 13);
+            this.lStandart4.Name = "lStandart4";
+            this.lStandart4.Size = new System.Drawing.Size(151, 25);
+            this.lStandart4.TabIndex = 6;
+            this.lStandart4.Text = "Başlangıç Tarihi";
+            // 
+            // lStandart3
+            // 
+            this.lStandart3.AutoSize = true;
+            this.lStandart3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart3.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lStandart3.Location = new System.Drawing.Point(3, 29);
+            this.lStandart3.Name = "lStandart3";
+            this.lStandart3.Size = new System.Drawing.Size(113, 25);
+            this.lStandart3.TabIndex = 5;
+            this.lStandart3.Text = "Ürün Grubu";
+            // 
+            // lStandart2
+            // 
+            this.lStandart2.AutoSize = true;
+            this.lStandart2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart2.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lStandart2.Location = new System.Drawing.Point(19, 15);
+            this.lStandart2.Name = "lStandart2";
+            this.lStandart2.Size = new System.Drawing.Size(142, 25);
+            this.lStandart2.TabIndex = 2;
+            this.lStandart2.Text = "Filtreleme Türü";
+            // 
+            // tUrunAra
+            // 
+            this.tUrunAra.BackColor = System.Drawing.Color.White;
+            this.tUrunAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tUrunAra.Location = new System.Drawing.Point(134, 25);
+            this.tUrunAra.Name = "tUrunAra";
+            this.tUrunAra.Size = new System.Drawing.Size(250, 30);
+            this.tUrunAra.TabIndex = 1;
+            this.tUrunAra.TextChanged += new System.EventHandler(this.tUrunAra_TextChanged);
+            // 
+            // lStandart6
+            // 
+            this.lStandart6.AutoSize = true;
+            this.lStandart6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart6.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart6.Location = new System.Drawing.Point(26, 28);
+            this.lStandart6.Name = "lStandart6";
+            this.lStandart6.Size = new System.Drawing.Size(90, 25);
+            this.lStandart6.TabIndex = 0;
+            this.lStandart6.Text = "Ürün Ara";
+            // 
             // gridListe
             // 
             this.gridListe.AllowUserToAddRows = false;
+            this.gridListe.AllowUserToDeleteRows = false;
             this.gridListe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridListe.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -350,6 +355,7 @@
             this.gridListe.EnableHeadersVisualStyles = false;
             this.gridListe.Location = new System.Drawing.Point(0, 0);
             this.gridListe.Name = "gridListe";
+            this.gridListe.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));

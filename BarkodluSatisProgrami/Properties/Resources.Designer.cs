@@ -63,6 +63,16 @@ namespace BarkodluSatisProgrami.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ara32 {
+            get {
+                object obj = ResourceManager.GetObject("Ara32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ara3232 {
             get {
                 object obj = ResourceManager.GetObject("ara3232", resourceCulture);
@@ -96,6 +106,16 @@ namespace BarkodluSatisProgrami.Properties {
         internal static System.Drawing.Bitmap Ekle20 {
             get {
                 object obj = ResourceManager.GetObject("Ekle20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ekle24 {
+            get {
+                object obj = ResourceManager.GetObject("Ekle24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

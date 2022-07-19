@@ -85,6 +85,12 @@
     <Compile Include="fNakitKart.Designer.cs">
       <DependentUpon>fNakitKart.cs</DependentUpon>
     </Compile>
+    <Compile Include="fRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRapor.Designer.cs">
+      <DependentUpon>fRapor.cs</DependentUpon>
+    </Compile>
     <Compile Include="fSatis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fNakitKart.resx">
       <DependentUpon>fNakitKart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRapor.resx">
+      <DependentUpon>fRapor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fSatis.resx">
       <DependentUpon>fSatis.cs</DependentUpon>
@@ -231,6 +240,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Ara32.png" />
+    <None Include="Resources\Ekle24.png" />
     <None Include="Resources\ara3232.png" />
     <None Include="Resources\removewhite.png" />
     <None Include="Resources\share %282%29.png" />

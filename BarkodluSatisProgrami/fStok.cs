@@ -38,6 +38,10 @@ namespace BarkodluSatisProgrami
                             db.Urun.Where(x => x.UrunGrup == urunGrubu).OrderBy(x => x.Miktar).Load();
                             gridListe.DataSource = db.Urun.Local.ToBindingList();
                         }
+                        else
+                        {
+                            MessageBox.Show("Lütfen Filtreleme Türünü Seçiniz!");
+                        }
                     }
                     else if (cmbIslemTuru.SelectedIndex == 1)
                     {
@@ -54,10 +58,19 @@ namespace BarkodluSatisProgrami
                             db.StokHareket.OrderByDescending(x => x.Tarih).Where(x => x.Tarih >= baslangic && x.Tarih <= bitis && x.UrunGrup.Contains(urunGrubu)).Load();
                             gridListe.DataSource = db.StokHareket.Local.ToBindingList();
                         }
+                        else
+                        {
+                            MessageBox.Show("Lütfen Filtreleme Türünü Seçiniz!");
+                        }
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Lütfen İşlem Türü Seçiniz!");
                 }
                 
             }
+            Islemler.GridDuzenle(gridListe);
         }
 
         BarkodluDbEntities dbx = new BarkodluDbEntities();
@@ -66,6 +79,50 @@ namespace BarkodluSatisProgrami
             cmbUrunGrubu.DisplayMember = "UrunGrupAd";
             cmbUrunGrubu.ValueMember = "Id";
             cmbUrunGrubu.DataSource = dbx.UrunGrup.ToList();
+        }
+
+        private void tUrunAra_TextChanged(object sender, EventArgs e)
+        {
+            
+                string urunAd = tUrunAra.Text;
+                using (var db = new BarkodluDbEntities())
+                {
+                    if (cmbIslemTuru.SelectedIndex==0)
+                    {
+                        db.Urun.Where(x => x.UrunAd.Contains(urunAd)).Load();
+                        gridListe.DataSource = db.Urun.Local.ToBindingList();
+                    }
+                    else if (cmbIslemTuru.SelectedIndex == 1)
+                    {
+                        db.StokHareket.Where(x => x.UrunAd.Contains(urunAd)).Load();
+                        gridListe.DataSource = db.Urun.Local.ToBindingList();
+                    }
+                }
+            Islemler.GridDuzenle(gridListe);
+        }
+
+        private void rdTumu_CheckedChanged(object sender, EventArgs e)
+        {
+            cmbUrunGrubu.Enabled = false;
+        }
+
+        private void rdUrunGrubunaGore_CheckedChanged(object sender, EventArgs e)
+        {
+            cmbUrunGrubu.Enabled=true;
+        }
+
+        private void cmbIslemTuru_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbIslemTuru.SelectedIndex == 0)
+            {
+                dateBaslangic.Enabled = false;
+                dateBitis.Enabled = false;
+            }
+            else if (cmbIslemTuru.SelectedIndex == 1)
+            {
+                dateBaslangic.Enabled = true;
+                dateBitis.Enabled = true;
+            }
         }
     }
 }
