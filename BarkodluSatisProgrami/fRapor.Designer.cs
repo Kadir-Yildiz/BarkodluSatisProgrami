@@ -33,6 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.bGiderEkle = new System.Windows.Forms.Button();
+            this.bGelirEkle = new System.Windows.Forms.Button();
+            this.dtBitis = new System.Windows.Forms.DateTimePicker();
+            this.dtBaslangic = new System.Windows.Forms.DateTimePicker();
+            this.listFiltrelemeTuru = new System.Windows.Forms.ListBox();
             this.lStandart17 = new BarkodluSatisProgrami.lStandart();
             this.lStandart16 = new BarkodluSatisProgrami.lStandart();
             this.tKartKomisyon = new BarkodluSatisProgrami.tNumeric();
@@ -57,16 +62,11 @@
             this.tSatisNakit = new BarkodluSatisProgrami.tNumeric();
             this.lStandart3 = new BarkodluSatisProgrami.lStandart();
             this.lStandart2 = new BarkodluSatisProgrami.lStandart();
-            this.dtBitis = new System.Windows.Forms.DateTimePicker();
+            this.bGoster = new BarkodluSatisProgrami.bStandart();
             this.lStandart5 = new BarkodluSatisProgrami.lStandart();
-            this.dtBaslangic = new System.Windows.Forms.DateTimePicker();
             this.lStandart4 = new BarkodluSatisProgrami.lStandart();
-            this.listFiltrelemeTuru = new System.Windows.Forms.ListBox();
             this.lStandart1 = new BarkodluSatisProgrami.lStandart();
             this.gridListe = new BarkodluSatisProgrami.gridOzel();
-            this.bGiderEkle = new System.Windows.Forms.Button();
-            this.bGelirEkle = new System.Windows.Forms.Button();
-            this.bGoster = new BarkodluSatisProgrami.bStandart();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -77,6 +77,8 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer1.IsSplitterFixed = true;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -121,8 +123,67 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.gridListe);
             this.splitContainer1.Size = new System.Drawing.Size(1367, 763);
-            this.splitContainer1.SplitterDistance = 302;
+            this.splitContainer1.SplitterDistance = 253;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // bGiderEkle
+            // 
+            this.bGiderEkle.BackColor = System.Drawing.Color.DarkCyan;
+            this.bGiderEkle.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
+            this.bGiderEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bGiderEkle.Image = global::BarkodluSatisProgrami.Properties.Resources.Ekle24;
+            this.bGiderEkle.Location = new System.Drawing.Point(1233, 200);
+            this.bGiderEkle.Name = "bGiderEkle";
+            this.bGiderEkle.Size = new System.Drawing.Size(85, 66);
+            this.bGiderEkle.TabIndex = 40;
+            this.bGiderEkle.UseVisualStyleBackColor = false;
+            // 
+            // bGelirEkle
+            // 
+            this.bGelirEkle.BackColor = System.Drawing.Color.YellowGreen;
+            this.bGelirEkle.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
+            this.bGelirEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bGelirEkle.Image = global::BarkodluSatisProgrami.Properties.Resources.Ekle24;
+            this.bGelirEkle.Location = new System.Drawing.Point(1233, 65);
+            this.bGelirEkle.Name = "bGelirEkle";
+            this.bGelirEkle.Size = new System.Drawing.Size(85, 66);
+            this.bGelirEkle.TabIndex = 39;
+            this.bGelirEkle.UseVisualStyleBackColor = false;
+            // 
+            // dtBitis
+            // 
+            this.dtBitis.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dtBitis.Location = new System.Drawing.Point(216, 197);
+            this.dtBitis.Name = "dtBitis";
+            this.dtBitis.Size = new System.Drawing.Size(229, 28);
+            this.dtBitis.TabIndex = 13;
+            // 
+            // dtBaslangic
+            // 
+            this.dtBaslangic.CalendarMonthBackground = System.Drawing.Color.Wheat;
+            this.dtBaslangic.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dtBaslangic.Location = new System.Drawing.Point(216, 100);
+            this.dtBaslangic.Name = "dtBaslangic";
+            this.dtBaslangic.Size = new System.Drawing.Size(229, 28);
+            this.dtBaslangic.TabIndex = 11;
+            // 
+            // listFiltrelemeTuru
+            // 
+            this.listFiltrelemeTuru.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.listFiltrelemeTuru.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listFiltrelemeTuru.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.listFiltrelemeTuru.FormattingEnabled = true;
+            this.listFiltrelemeTuru.ItemHeight = 25;
+            this.listFiltrelemeTuru.Items.AddRange(new object[] {
+            "Tümü",
+            "Satışlar",
+            "İade",
+            "Gelir(Satış Hariç)",
+            "Gider(İade Hariç)"});
+            this.listFiltrelemeTuru.Location = new System.Drawing.Point(36, 100);
+            this.listFiltrelemeTuru.Name = "listFiltrelemeTuru";
+            this.listFiltrelemeTuru.Size = new System.Drawing.Size(154, 125);
+            this.listFiltrelemeTuru.TabIndex = 1;
             // 
             // lStandart17
             // 
@@ -398,13 +459,24 @@
             this.lStandart2.TabIndex = 15;
             this.lStandart2.Text = "Nakit";
             // 
-            // dtBitis
+            // bGoster
             // 
-            this.dtBitis.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtBitis.Location = new System.Drawing.Point(216, 197);
-            this.dtBitis.Name = "dtBitis";
-            this.dtBitis.Size = new System.Drawing.Size(229, 28);
-            this.dtBitis.TabIndex = 13;
+            this.bGoster.BackColor = System.Drawing.Color.Tomato;
+            this.bGoster.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
+            this.bGoster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bGoster.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bGoster.ForeColor = System.Drawing.Color.White;
+            this.bGoster.Image = global::BarkodluSatisProgrami.Properties.Resources.Ara32;
+            this.bGoster.Location = new System.Drawing.Point(449, 100);
+            this.bGoster.Margin = new System.Windows.Forms.Padding(1);
+            this.bGoster.Name = "bGoster";
+            this.bGoster.Size = new System.Drawing.Size(106, 125);
+            this.bGoster.TabIndex = 14;
+            this.bGoster.Text = "Göster";
+            this.bGoster.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.bGoster.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.bGoster.UseVisualStyleBackColor = false;
+            this.bGoster.Click += new System.EventHandler(this.bGoster_Click);
             // 
             // lStandart5
             // 
@@ -417,15 +489,6 @@
             this.lStandart5.TabIndex = 12;
             this.lStandart5.Text = "Bitiş Tarihi";
             // 
-            // dtBaslangic
-            // 
-            this.dtBaslangic.CalendarMonthBackground = System.Drawing.Color.Wheat;
-            this.dtBaslangic.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtBaslangic.Location = new System.Drawing.Point(216, 100);
-            this.dtBaslangic.Name = "dtBaslangic";
-            this.dtBaslangic.Size = new System.Drawing.Size(229, 28);
-            this.dtBaslangic.TabIndex = 11;
-            // 
             // lStandart4
             // 
             this.lStandart4.AutoSize = true;
@@ -436,24 +499,6 @@
             this.lStandart4.Size = new System.Drawing.Size(151, 25);
             this.lStandart4.TabIndex = 10;
             this.lStandart4.Text = "Başlangıç Tarihi";
-            // 
-            // listFiltrelemeTuru
-            // 
-            this.listFiltrelemeTuru.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.listFiltrelemeTuru.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listFiltrelemeTuru.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.listFiltrelemeTuru.FormattingEnabled = true;
-            this.listFiltrelemeTuru.ItemHeight = 25;
-            this.listFiltrelemeTuru.Items.AddRange(new object[] {
-            "Tümü",
-            "Satışlar",
-            "İade",
-            "Gelir(Satış Hariç)",
-            "Gider(İade Hariç)"});
-            this.listFiltrelemeTuru.Location = new System.Drawing.Point(36, 100);
-            this.listFiltrelemeTuru.Name = "listFiltrelemeTuru";
-            this.listFiltrelemeTuru.Size = new System.Drawing.Size(154, 125);
-            this.listFiltrelemeTuru.TabIndex = 1;
             // 
             // lStandart1
             // 
@@ -520,51 +565,9 @@
             this.gridListe.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.gridListe.RowTemplate.Height = 32;
             this.gridListe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridListe.Size = new System.Drawing.Size(1367, 457);
+            this.gridListe.Size = new System.Drawing.Size(1367, 506);
             this.gridListe.TabIndex = 2;
-            // 
-            // bGiderEkle
-            // 
-            this.bGiderEkle.BackColor = System.Drawing.Color.DarkCyan;
-            this.bGiderEkle.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
-            this.bGiderEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bGiderEkle.Image = global::BarkodluSatisProgrami.Properties.Resources.Ekle24;
-            this.bGiderEkle.Location = new System.Drawing.Point(1233, 200);
-            this.bGiderEkle.Name = "bGiderEkle";
-            this.bGiderEkle.Size = new System.Drawing.Size(85, 66);
-            this.bGiderEkle.TabIndex = 40;
-            this.bGiderEkle.UseVisualStyleBackColor = false;
-            // 
-            // bGelirEkle
-            // 
-            this.bGelirEkle.BackColor = System.Drawing.Color.YellowGreen;
-            this.bGelirEkle.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
-            this.bGelirEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bGelirEkle.Image = global::BarkodluSatisProgrami.Properties.Resources.Ekle24;
-            this.bGelirEkle.Location = new System.Drawing.Point(1233, 65);
-            this.bGelirEkle.Name = "bGelirEkle";
-            this.bGelirEkle.Size = new System.Drawing.Size(85, 66);
-            this.bGelirEkle.TabIndex = 39;
-            this.bGelirEkle.UseVisualStyleBackColor = false;
-            // 
-            // bGoster
-            // 
-            this.bGoster.BackColor = System.Drawing.Color.Tomato;
-            this.bGoster.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
-            this.bGoster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bGoster.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bGoster.ForeColor = System.Drawing.Color.White;
-            this.bGoster.Image = global::BarkodluSatisProgrami.Properties.Resources.Ara32;
-            this.bGoster.Location = new System.Drawing.Point(449, 100);
-            this.bGoster.Margin = new System.Windows.Forms.Padding(1);
-            this.bGoster.Name = "bGoster";
-            this.bGoster.Size = new System.Drawing.Size(106, 125);
-            this.bGoster.TabIndex = 14;
-            this.bGoster.Text = "Göster";
-            this.bGoster.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.bGoster.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.bGoster.UseVisualStyleBackColor = false;
-            this.bGoster.Click += new System.EventHandler(this.bGoster_Click);
+            this.gridListe.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridListe_CellFormatting);
             // 
             // fRapor
             // 
@@ -574,6 +577,7 @@
             this.ClientSize = new System.Drawing.Size(1367, 763);
             this.Controls.Add(this.splitContainer1);
             this.Name = "fRapor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Raporlama Sayfası ";
             this.Load += new System.EventHandler(this.fRapor_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
