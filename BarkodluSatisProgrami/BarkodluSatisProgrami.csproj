@@ -73,6 +73,12 @@
     <Compile Include="Barkod.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="fDetayGoster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDetayGoster.Designer.cs">
+      <DependentUpon>fDetayGoster.cs</DependentUpon>
+    </Compile>
     <Compile Include="fGelirGider.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     <Compile Include="UrunGrup.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="fDetayGoster.resx">
+      <DependentUpon>fDetayGoster.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fGelirGider.resx">
       <DependentUpon>fGelirGider.cs</DependentUpon>
     </EmbeddedResource>

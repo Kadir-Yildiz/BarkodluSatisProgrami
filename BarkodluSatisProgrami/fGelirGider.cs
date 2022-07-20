@@ -49,43 +49,54 @@ namespace BarkodluSatisProgrami
         {
             if (cmbOdemeTuru.Text!="")
             {
-                if (tNakit.Text != "" && tKart.Text != "" && (tNakit.Text != "0" && tKart.Text !="0"))
+                if (tNakit.Text != "" && tKart.Text != "" )
                 {
-                    using (var db = new BarkodluDbEntities())
+                    if (tNakit.Text == "0" && tKart.Text == "0")
                     {
-                        IslemOzet io = new IslemOzet();
-                        io.IslemNo = 0;
-                        io.Iade = false;
-                        io.OdemeSekli = cmbOdemeTuru.Text;
-                        io.Nakit = Islemler.DoubleYap(tNakit.Text);
-                        io.Kart = Islemler.DoubleYap(tKart.Text);
-                        if (GelirGider=="GELİR")
-                        {
-                            io.Gelir = true;
-                            io.Gider = false;
-                        }
-                        else
-                        {
-                            io.Gelir = false;
-                            io.Gider = true;
-                        }
-                        io.AlisFiyatToplam = 0;
-                        io.Aciklama = GelirGider + " - İşlemi "+ tAciklama.Text;
-                        io.Tarih = dtTarih.Value;
-                        io.Kullanici = Kullanici;
-                        db.IslemOzet.Add(io);
-                        db.SaveChanges();
-                        MessageBox.Show(GelirGider + " İşlemi Kaydedildi!");
-                        tNakit.Text = "0";
-                        tKart.Text = "0";
-                        tAciklama.Clear();
-                        cmbOdemeTuru.Text = "";
-                        fRapor f = (fRapor)Application.OpenForms["fRapor"];
-                        if (f!=null)
-                        {
-                            f.bGoster_Click(null,null);
-                        }
+                        MessageBox.Show("Lütfen Gelir veya Gider Miktarını Giriniz!");
+                        return;
                     }
+                    else
+                    {
+                        using (var db = new BarkodluDbEntities())
+                        {
+                            IslemOzet io = new IslemOzet();
+                            io.IslemNo = 0;
+                            io.Iade = false;
+                            io.OdemeSekli = cmbOdemeTuru.Text;
+                            io.Nakit = Islemler.DoubleYap(tNakit.Text);
+                            io.Kart = Islemler.DoubleYap(tKart.Text);
+                            if (GelirGider == "GELİR")
+                            {
+                                io.Gelir = true;
+                                io.Gider = false;
+                            }
+                            else
+                            {
+                                io.Gelir = false;
+                                io.Gider = true;
+                            }
+                            io.AlisFiyatToplam = 0;
+                            io.Aciklama = GelirGider + " - İşlemi " + tAciklama.Text;
+                            io.Tarih = dtTarih.Value;
+                            io.Kullanici = Kullanici;
+                            db.IslemOzet.Add(io);
+                            db.SaveChanges();
+                            MessageBox.Show(GelirGider + " İşlemi Kaydedildi!");
+                            tNakit.Text = "0";
+                            tKart.Text = "0";
+                            tAciklama.Clear();
+                            cmbOdemeTuru.Text = "";
+                            fRapor f = (fRapor)Application.OpenForms["fRapor"];
+                            if (f != null)
+                            {
+                                f.bGoster_Click(null, null);
+                            }
+                            this.Hide();
+                        }
+                        
+                    }
+
                 }
             }
             else
