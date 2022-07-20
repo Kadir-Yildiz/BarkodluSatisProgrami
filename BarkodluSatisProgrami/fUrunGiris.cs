@@ -56,7 +56,14 @@ namespace BarkodluSatisProgrami
                     guncelle.KdvOrani = Convert.ToInt32(tKdvOrani.Text);
                     guncelle.KdvTutari = Math.Round(Islemler.DoubleYap(tSatisFiyati.Text) * Convert.ToInt32(tKdvOrani.Text) / 100, 2);
                     guncelle.Miktar = Convert.ToDouble(tMiktar.Text);
-                    guncelle.Birim = "Adet";
+                    if (chUrunTipi.Checked)
+                    {
+                        guncelle.Birim = "Kg";
+                    }
+                    else
+                    {
+                        guncelle.Birim = "Adet";
+                    }
                     guncelle.Tarih = DateTime.Now;
                     guncelle.Kullanici = lKullanici.Text;
                     db.SaveChanges();
@@ -75,7 +82,14 @@ namespace BarkodluSatisProgrami
                     urun.KdvOrani = Convert.ToInt32(tKdvOrani.Text);
                     urun.KdvTutari = Math.Round(Islemler.DoubleYap(tSatisFiyati.Text) * Convert.ToInt32(tKdvOrani.Text) / 100, 2);
                     urun.Miktar += Convert.ToDouble(tMiktar.Text);
-                    urun.Birim = "Adet";
+                    if (chUrunTipi.Checked)
+                    {
+                        urun.Birim = "Kg";
+                    }
+                    else
+                    {
+                        urun.Birim = "Adet";
+                    }
                     urun.Tarih = DateTime.Now;
                     urun.Kullanici = lKullanici.Text;
                     db.Urun.Add(urun);
@@ -192,6 +206,18 @@ namespace BarkodluSatisProgrami
                     gridUrunler.DataSource = db.Urun.OrderByDescending(a => a.UrunId).Take(20).ToList();
                     Islemler.GridDuzenle(gridUrunler);
                 } 
+            }
+        }
+
+        private void chUrunTipi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chUrunTipi.Checked)
+            {
+                chUrunTipi.Text = "Gramajlı Ürün İşlemi";
+            }
+            else
+            {
+                chUrunTipi.Text = "Barkodlu Ürün İşlemi";
             }
         }
     }
