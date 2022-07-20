@@ -18,7 +18,7 @@ namespace BarkodluSatisProgrami
             InitializeComponent();
         }
 
-        private void bGoster_Click(object sender, EventArgs e)
+        public void bGoster_Click(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
             DateTime baslangic = DateTime.Parse(dtBaslangic.Value.ToShortDateString());
@@ -87,6 +87,7 @@ namespace BarkodluSatisProgrami
         {
             listFiltrelemeTuru.SelectedIndex = 0;
             tKartKomisyon.Text ="%"+ Islemler.KartKomisyon().ToString();
+            bGoster_Click(null, null);
         }
 
         private void gridListe_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -100,6 +101,22 @@ namespace BarkodluSatisProgrami
                     e.FormattingApplied = true;
                 }
             }
+        }
+
+        private void bGelirEkle_Click(object sender, EventArgs e)
+        {
+            fGelirGider f = new fGelirGider();
+            f.GelirGider = "GELİR";
+            f.Kullanici = lKullanici.Text;
+            f.ShowDialog();
+        }
+
+        private void bGiderEkle_Click(object sender, EventArgs e)
+        {
+            fGelirGider f = new fGelirGider();
+            f.GelirGider = "GİDER";
+            f.Kullanici = lKullanici.Text;
+            f.ShowDialog();
         }
     }
 }
